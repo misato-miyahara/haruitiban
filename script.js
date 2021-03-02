@@ -39,8 +39,8 @@ function initDemoMap(){
   map.setView([36.5, 136], 5)
 
   return {
-      map: map,
-      layerControl: layerControl
+    map: map,
+    layerControl: layerControl
   }
 }
 
@@ -52,16 +52,16 @@ var layerControl = mapStuff.layerControl
 // load data (u, v grids) from somewhere (e.g. https://github.com/danwild/wind-js-server)
 $.getJSON('/wind.json', function (data) {
   var velocityLayer = L.velocityLayer({
-  displayValues: true,
-  displayOptions: {
+    displayValues: true,
+    displayOptions: {
       velocityType: 'GBR Wind',
       displayPosition: 'bottomleft',
       displayEmptyString: 'No wind data'
-  },
-  data: data,
-      minVelocity: 0,
-      maxVelocity: 11,
-      velocityScale: 0.015,
+    },
+    data: data,
+    minVelocity: 0,
+    maxVelocity: 11,
+    velocityScale: 0.015,
   })
   layerControl.addOverlay(velocityLayer, 'Wind - Great Barrier Reef')
 })
