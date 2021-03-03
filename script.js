@@ -63,5 +63,5 @@ $.getJSON('./wind.json', function (data) {
     maxVelocity: 11,
     velocityScale: 0.015,
   })
-  layerControl.addOverlay(velocityLayer, 'Wind - Great Barrier Reef')
+  layerControl.addOverlay(velocityLayer, 'Wind - Japan 2021.3.2 -')
 })
